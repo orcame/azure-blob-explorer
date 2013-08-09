@@ -5,6 +5,10 @@
 clear the screen.
 '''
 import os
+import sys
 
 def do_action(cmd,p):
-	os.system('cls')
+	if sys.platform=='win32':
+		os.system('cls')
+	else:
+		os.system('clear')
